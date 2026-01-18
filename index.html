@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Sign Language Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-hands"></i> Letter Sign Language Converter</h1>
+            <p class="subtitle">Convert English & Arabic text to visual letter signs</p>
+        </header>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to Use:</h3>
+            <ul>
+                <li><i class="fas fa-mouse-pointer"></i> Select your input language (English or Arabic)</li>
+                <li><i class="fas fa-keyboard"></i> Type or paste your text in the text area</li>
+                <li><i class="fas fa-magic"></i> Click "Convert to Letter Signs"</li>
+                <li><i class="fas fa-eye"></i> Each word appears on a separate line with letter images below</li>
+            </ul>
+        </div>
+        
+        <div class="language-selector">
+            <button class="lang-btn active" id="englishBtn">
+                <span class="flag">🇺🇸</span>
+                <span>English</span>
+            </button>
+            <button class="lang-btn" id="arabicBtn">
+                <span class="flag">🇸🇦</span>
+                <span>العربية</span>
+            </button>
+        </div>
+        
+        <div class="input-section">
+            <textarea id="textInput" placeholder="Type your text here..."></textarea>
+            
+            <div class="controls">
+                <button class="convert-btn" id="convertBtn">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Convert to Letter Signs</span>
+                </button>
+                <button class="clear-btn" id="clearBtn">
+                    <i class="fas fa-trash-alt"></i>
+                    <span>Clear</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="output-section">
+            <h3 class="output-title">
+                <i class="fas fa-sign-language"></i> Letter Sign Output
+            </h3>
+            <div id="signOutput">
+                <div class="placeholder-text">
+                    <i class="fas fa-arrow-up"></i><br>
+                    Your converted text will appear here with letter sign images...
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2024 Letter Sign Language Converter | 
+                <span id="wordCount">0</span> words | 
+                <span id="letterCount">0</span> letters
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
